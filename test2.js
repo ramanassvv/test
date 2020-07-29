@@ -66,17 +66,7 @@ app.post("/",(req,res)=>{
     })
 })
 
-app.put("/",(req,res)=>{
-    let emp=req.body
-    console.log(emp);
-    connection.query("insert into employee values (?)",[req.body.emp],(err,results)=>{
-        if(!err)
-            res.send(results)
 
-        else
-            console.log(err);
-    })
-})
 
 app.patch("/",(req,res)=>{
     let emp=req.body
