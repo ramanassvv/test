@@ -39,19 +39,6 @@ app.get('/',(req,res)=>{
     })
 })
 
-app.get('/:id',(req,res)=>{
-    console.log("success");
-    connection.query('select * from employee where empid=?',[req.params.id],(err,results)=>{
-        if(err){
-            return res.send(err)
-        }
-        else{
-            return res.json({
-                data:results
-            })
-        }
-    })
-})
 
 
 
